@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def new
   end
 
-  # add create method here
+  # add create method here // Below can soooo be refactored with strong params but saving that for later
   def create
    post = Post.new
    post.title = params[:title]
@@ -18,5 +18,6 @@ class PostsController < ApplicationController
    post.save
    redirect_to post_path(post)
   end
+
 
 end
